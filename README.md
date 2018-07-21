@@ -1,16 +1,15 @@
 # kusanagi-php7
-PHP7 FastCGI Server ( for KUSANAGI Runs on Docker )
+PHP7 FastCGI Server ( for KUSANAGI Runs on Docker Ver. PRESSMAN )
 
 ## Versions(tags)
 
-- latest
-- 7.0.16
+- 7.2.7-alphpa
 
 ## Image Content
-- php:7.0.16-fpm-alpine
-- mysql 10.1.21-r0
-- apcu-5.1.8
-- apcu_bc-1.0.3
+- php:7.2.7-fpm-alpine
+- mysql 10.1.32-r0
+- apcu-5.1.12
+- apcu_bc-1.0.4
 - mysqli 
 - opcache
 - gd 
@@ -28,3 +27,4 @@ PHP7 FastCGI Server ( for KUSANAGI Runs on Docker )
 - xmlrpc
 - xsl
 - zip
+- mozjpeg
