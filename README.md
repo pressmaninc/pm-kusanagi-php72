@@ -1,9 +1,10 @@
-# kusanagi-php7
+# pm-kusanagi-php72
 PHP7 FastCGI Server ( for KUSANAGI Runs on Docker Ver. PRESSMAN )
 
 ## Versions(tags)
 
-- 7.2.7-alphpa.2
+- 7.2.7-alpha.2
+- 7.2.8-alpha
 
 ## Image Content
 - php:7.2.7-fpm-alpine
