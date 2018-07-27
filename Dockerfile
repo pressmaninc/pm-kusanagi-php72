@@ -1,8 +1,8 @@
 #//----------------------------------------------------------------------------
-#// PHP7 FastCGI Server ( for KUSANAGI Runs on Docker )
+#// PHP7.2 FastCGI Server ( for KUSANAGI Runs on Docker Ver. PRESSMAN)
 #//----------------------------------------------------------------------------
 FROM php:7.2.8-fpm-alpine
-MAINTAINER Yosuke Nakatsukasa <yosuke_nakatsukasa@pressman.ne.jp>
+LABEL maintainer="Yosuke Nakatsukasa <yosuke_nakatsukasa@pressman.ne.jp>"
 
 # Environment variable
 ARG MYSQL_VERSION=10.1.32-r0
@@ -24,6 +24,7 @@ RUN apk update && \
 	autoreconf -fiv && ./configure && make && make install && \
 	cd .. && \
 	ln -s /opt/mozjpeg/bin/* /usr/bin && \
+	ln -s /opt/mozjpeg/lib64/*.so* /usr/lib && \
 	apk del .build-mozjpeg
 
 RUN apk add --update --no-cache \
@@ -54,6 +55,7 @@ RUN apk add --update --no-cache \
 	docker-php-ext-enable apcu && \
 	pecl install apcu_bc-$APCU_BC_VERSION && \
 	docker-php-ext-enable apc && \
+	docker-php-ext-configure gd --with-jpeg-dir=/opt/mozjpeg && \
 	docker-php-ext-install \
 		mysqli \
 		opcache \
