@@ -23,8 +23,6 @@ RUN apk update && \
 	cd mozjpeg-3.3.1 && \
 	autoreconf -fiv && ./configure && make && make install && \
 	cd .. && \
-	ln -s /opt/mozjpeg/bin/* /usr/bin && \
-	ln -s /opt/mozjpeg/lib64/*.so* /usr/lib && \
 	apk del .build-mozjpeg
 
 RUN apk add --update --no-cache \
@@ -55,6 +53,10 @@ RUN apk add --update --no-cache \
 	docker-php-ext-enable apcu && \
 	pecl install apcu_bc-$APCU_BC_VERSION && \
 	docker-php-ext-enable apc && \
+	rm /usr/lib/libjpeg.so* && \
+	rm /usr/lib/libturbojpeg.so* && \
+	ln -s /opt/mozjpeg/bin/* /usr/bin && \
+	ln -s /opt/mozjpeg/lib64/*.so* /usr/lib && \
 	docker-php-ext-configure gd --with-jpeg-dir=/opt/mozjpeg && \
 	docker-php-ext-install \
 		mysqli \
