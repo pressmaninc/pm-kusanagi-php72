@@ -4,6 +4,7 @@ PHP7.2 FastCGI Server ( for KUSANAGI Runs on Docker Ver. PRESSMAN )
 ## Versions(tags)
 
 - latest
+- 7.2.11
 - 7.2.10
 - 7.2.9-1
 - 7.2.9
