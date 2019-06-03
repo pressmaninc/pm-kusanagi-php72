@@ -4,6 +4,7 @@ PHP7.2 FastCGI Server ( for KUSANAGI Runs on Docker Ver. PRESSMAN )
 ## Versions(tags)
 
 - latest
+- 7.2.19
 - 7.2.18
 - 7.2.17
 - 7.2.16
@@ -21,7 +22,7 @@ PHP7.2 FastCGI Server ( for KUSANAGI Runs on Docker Ver. PRESSMAN )
 
 ## Image Content
 - php:7.2.x-fpm-alpine
-- mysql 10.3.12-r2
+- mysql 10.3.15-r0
 - apcu-5.1.16
 - apcu_bc-1.0.4
 - mysqli 
