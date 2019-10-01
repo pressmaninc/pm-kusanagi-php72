@@ -1,7 +1,7 @@
 #//----------------------------------------------------------------------------
 #// PHP7.2 FastCGI Server ( for KUSANAGI Runs on Docker Ver. PRESSMAN)
 #//----------------------------------------------------------------------------
-FROM php:7.2.22-fpm-alpine
+FROM php:7.2.23-fpm-alpine
 LABEL maintainer="PRESSMAN <wp10@pressman.ne.jp>"
 
 # Environment variable
